@@ -1,0 +1,13 @@
+<GeneralContainer>
+    <div class="product item-details-page {{if this.isZoomed 'is-zoomed' }}">
+        <Product::Image @src={{this.productImage}} @toggleZoom={{this.toggleZoom}} />
+        <Product::Details @color={{this.color}} @onChangeColor={{this.onChangeColor}} @colors={{this.model.colors}}
+            @name={{this.model.name}} @price={{this.model.price}} @isDetails={{true}} @yuva="yuavteheja" />
+    </div>
+    <h5 class="mt-5">Features</h5>
+    <ul>
+        {{#each this.model.features as |feature|}}
+        <li>{{feature}}</li>
+        {{/each}}
+    </ul>
+</GeneralContainer>
